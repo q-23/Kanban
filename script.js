@@ -16,11 +16,29 @@ $(function() {
 	    this.$element = createColumn();
 
 	    function createColumn() {
-			var $column = $('<div>').addClass('column');
-			var $columnTitle = $('<h2>').addClass('column-title').text(self.name);
-			var $columnCardList = $('<ul>').addClass('column-card-list');
-			var $columnDelete = $('<button>').addClass('btn-delete').text('x');
-			var $columnAddCard = $('<button>').addClass('add-card').text('Add a card');
-			}
-	  }
+		    // CREATING COMPONENTS OF COLUMNS
+		    var $column = $('<div>').addClass('column');
+		    var $columnTitle = $('<h2>').addClass('column-title').text(self.name);
+		    var $columnCardList = $('<ul>').addClass('column-card-list');
+		    var $columnDelete = $('<button>').addClass('btn-delete').text('x');
+		    var $columnAddCard = $('<button>').addClass('add-card').text('Add a card');
+
+		    // ADDING EVENTS
+		    $columnDelete.click(function() {
+		        self.removeColumn();
+		    });
+		    $columnAddCard.click(function(event) {
+		        self.addCard(new Card(prompt("Enter the name of the card")));
+		    });
+
+		    // CONSTRUCTION COLUMN ELEMENT
+		    $column.append($columnTitle)
+		        .append($columnDelete)
+		        .append($columnAddCard)
+		        .append($columnCardList);
+
+		    // RETURN OF CREATED COLUMN
+		    return $column;
+		}
+	}
 })
