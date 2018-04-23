@@ -1,4 +1,5 @@
 $(function() {
+	
     function randomString() {
 	    var chars = '0123456789abcdefghiklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXTZ';
 	    var str = '';
@@ -41,4 +42,15 @@ $(function() {
 		    return $column;
 		}
 	}
+
+	Column.prototype = {
+	    addCard: function(card) {
+	      this.$element.children('ul').append(card.$element);
+	    },
+	    removeColumn: function() {
+	      this.$element.remove();
+	    }
+	};
+
+
 })
