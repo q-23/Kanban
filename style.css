@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-color:#e5efff;
+}
+ul {
+	list-style-type:none;
+}
+.add-card {
+	background-color:#7892c2;
+	border-radius:28px;
+	border: 1px solid #7892c3;
+	cursor:pointer;
+	padding:7px 7px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+}
+.btn-delete {
+	background-color:#c62d1f;
+	border-radius:50%;
+	border:1px solid #d02718;
+	cursor:pointer;
+	padding:10px 15px;
+	margin: 10px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+}
+.create-column {
+	background-color:#3d94f6;
+	border-radius:24px;
+	border:1px solid #337fed;
+	cursor:pointer;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528009;
+}
