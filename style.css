@@ -3,6 +3,9 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	background-color:#e5efff;
 }
+h1 {
+	text-align: center;
+}
 ul {
 	list-style-type:none;
 }
@@ -25,12 +28,65 @@ ul {
 	text-decoration:none;
 	text-shadow:0px 1px 0px #810e05;
 }
-.create-column {
-	background-color:#3d94f6;
-	border-radius:24px;
-	border:1px solid #337fed;
-	cursor:pointer;
-	padding:16px 31px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #528009;
+.create-column { 
+	display: block; 
+	margin: 10px auto; 
+	height: 40px;
+	width: 200px; 
+	border: 1px solid #5b99ff;
+	background-color: #c6eaff;
+}
+
+.column-container { 
+	margin: 30px; 
+	display: -webkit-box;
+	display: -ms-flexbox; 
+	display: flex; 
+	-ms-flex-flow: wrap;
+	flex-flow: wrap;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+	 margin-top: 10px; 
+}
+
+.column-container .column { 
+	border: 1px solid #5b99ff; 
+	background-color: white; 
+	min-width: 400px; 
+	min-height: 400px; 
+	margin: 15px 0;
+	-webkit-box-flex: 0;
+	-ms-flex: 0 auto;
+	flex: 0 auto;
+	border-radius: 5px;
+	box-shadow: 5px 5px 10px lightgray; 
+}
+
+.column-container .column .column-title { 
+	text-align: center;
+	background-color: #a3c6ff;
+	border-radius: 5px 5px 0 0;
+	min-height: 50px; 
+	margin-top: 0;
+	line-height: 50px; 
+}
+
+.column-container .column .column-card-list { 
+	list-style-type: none;
+	background-color: white;
+	padding: 0;
+	min-height: 400px;
+}
+
+.column-container .column .column-card-list .card { 
+	background-color: #c6eaff;
+	box-shadow: 5px 5px 10px #a3c6ff;
+	min-height: 100px;
+	width: 85%;
+	border-radius: 5px;
+	margin: 10px auto; 
+}
+
+.column-container .column .column-card-list .card p { 
+	 padding: 10px 10px; 
 }
